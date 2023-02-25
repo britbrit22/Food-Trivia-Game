@@ -9,4 +9,4 @@ MVP Goals
 As a player, I will start with the first category.
 As a player, I will display the ingredients in each category.
 As a player, I will click on each ingredient to eliminate that choice.
-# Hidden-Foods-Games
+
