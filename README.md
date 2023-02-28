@@ -8,13 +8,13 @@ This is a Food Trivia Game. The correct answer will be multiple choice. You will
 
 ## MVP Goals 
 
-As a player, I will click on a category questions.
-As a player, I will choose an answer for the questions.
-As a player, if the answer is correct I advance to the next level.
-As a player, if I answer incorrect I will go back to the first level.
+- As a player, I will click on a category questions.
+- As a player, I will choose an answer for the questions.
+- As a player, if the answer is correct I advance to the next level.
+- As a player, if I answer incorrect I will go back to the first level.
 
 ## Stretch Goals
 
-As a player, I would like to have a bonus round.
-As a player, I would like to redeem a missed question.
-As a player, I would like to have timed questions.
+- As a player, I would like to have a bonus round.
+- As a player, I would like to redeem a missed question.
+- As a player, I would like to have timed questions.
