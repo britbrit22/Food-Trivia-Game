@@ -1,6 +1,6 @@
 # Food-Trivia-Game
 
-This is a Food Trivia Game. The correct answer will be multiple choice. You will score points for each correct answer. If the answer chosen is correct you will advance to the next level. If the answer chosen is incorrect you will have to start over to the beginning and lose points. There will be 10 questions.
+This is a Food Trivia Game. There will be 10 questions. The answer to each question will be multiple choice. You will score points for each correct answer. If the answer chosen is correct you will move to the next questions and score points. If the answer chosen is incorrect you will move to the next question but not score any points. To be a winner, you will need to answer 80 percent of the questions correct. 
 
 ![wireframe](https://imgur.com/jNJ6qXs.png)
 
