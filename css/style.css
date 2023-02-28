@@ -1,13 +1,34 @@
 body {
-    background-color: rgb(173, 230, 179);
-  }
-  
-  h1 {
-    color: #0b0808;
-    text-align: center;
-  }
-  
-  p {
-    font-family: verdana;
-    font-size: 20px;
-  }
+  background-color: rgb(173, 230, 179);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}  
+h1 {
+  color: #0b0808;
+  text-align: center;
+}
+
+.points-scored {
+  text-align:right;
+  margin-right: 30px;
+  /* border: 2px solid red; */
+
+}
+
+.question-container {
+  display: center;
+  width: 800px;
+  border: 20px solid black;
+  padding: 60px;
+  margin: 20px
+
+
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
