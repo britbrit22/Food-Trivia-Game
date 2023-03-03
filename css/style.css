@@ -1,10 +1,11 @@
 body {
-  background-color: rgb(173, 230, 179);
+  background-color: rgb(214, 246, 246);
 }
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border box-sizing: ;
 }  
 h1 {
   color: #0b0808;
@@ -18,17 +19,28 @@ h1 {
 
 }
 
+
 .question-container {
   display: center;
   width: 800px;
   border: 20px solid black;
   padding: 60px;
-  margin: 20px
-
-
+  margin: 20px;
+  
+  
 }
 
-p {
-  font-family: verdana;
-  font-size: 20px;
+.answer-container {
+  padding-left: 100px;
+  padding-right: 150px;
+  margin: 20px;
+  border: 10px solid black;
+  width: 40px;
 }
+
+
+
+
+
+
+
