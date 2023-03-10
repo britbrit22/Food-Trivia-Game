@@ -26,7 +26,7 @@ const button = document.createElement('button')
 
 const questions =  [
     {
-        question: "Which fast-food restaurant has the slogan, Eat fresh?",
+        question1: "Which fast-food restaurant has the slogan, Eat fresh?",
         answer1: "Taco Bell",
         answer2: "Subway",
         answer3: "Wendys",
@@ -35,7 +35,7 @@ const questions =  [
      },
      {
 
-        question: "What is the most common pizza topping?",
+        question2: "What is the most common pizza topping?",
         answer: "Pepperoni",
         answer: "Ham",
         answer: "Sausage",
@@ -43,7 +43,7 @@ const questions =  [
         correctAnswer: "Pepperoni",
      },
      {
-        question: "How many flavors of ice cream does Baskin-Robbins have?",
+        question3: "How many flavors of ice cream does Baskin-Robbins have?",
         answer1: "22",
         answer2: "60",
         answer3: "40",
@@ -51,7 +51,7 @@ const questions =  [
         correctAnswer: "31",
      },   
      { 
-        question: "Coca-Cola was first sold in which state?",
+        question4: "Coca-Cola was first sold in which state?",
         answer1: "New York",
         answer2: "Arizona",
         answer3: "Georgia",
@@ -59,7 +59,7 @@ const questions =  [
         correctAnswer: "Georgia",
      },
      {
-        question: "What is the oldest soft drink in America?",
+        question5: "What is the oldest soft drink in America?",
         answer1: "Coca Cola",
         answer2: "Pepsi",
         answer3: "Sprite",
@@ -71,23 +71,38 @@ const questions =  [
 const start = true;
 
 function generate(Class) {
+    
 
-    const answer = document.querySelectorAll("answer")
 }
+const answer = document.querySelectorAll(".answer")
 
-const question = document.querySelector("question");
+console.log({answer})
+      
+const question = document.querySelector(".question");
 
-question.innerText = 'question[Class]';
+console.log({question})
 
-const answer1 = document.getElementByClass('answer1');
-const answer2 = document.getElementByClass('answer2');
-const answer3 = document.getElementByClass('answer3');
-const answer4 = document.getElementByClass('answer4');
+question.innertext = 'question[Class]';
 
-answer1.innerText = questions[Class].answer1;
-answer2.innerText = questions[Class].answer2;
-answer3.innerText = questions[Class].answer3;
-answer4.innerText = questions[Class].answer4;
+const answer1 = document.querySelector('.answer1');
+console.log({answer1})
+const answer2 = document.querySelector('.answer2');
+console.log({answer2})
+const answer3 = document.querySelector('.answer3');
+console.log({answer3})
+const answer4 = document.querySelector('.answer4');
+console.log({answer4})
+
+
+
+answer1.innerText = questions[0].answer1;
+answer2.innerText = questions[0].answer2;
+answer3.innerText = questions[0].answer3;
+answer4.innerText = questions[0].answer4;
+
+
+
+
 
 
 
