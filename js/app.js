@@ -58,14 +58,14 @@ const questions =  [
         answer4: "Texas",
         correctAnswer: "Georgia",
      },
-   //   {
-   //      question: "What is the oldest soft drink in America?",
-   //      answer1: "Coca Cola",isCorrect: false,
-   //      answer2: "Pepsi",isCorrect: false,
-   //      answer3: "Sprite",isCorrect: false,
-   //      answer4: "Dr. Pepper",isCorrect: true,
-   //      correctAnswer: "Dr. Pepper",
-   //   }
+     {
+        question: "What is the oldest soft drink in America?",
+        answer1: "Coca Cola",
+        answer2: "Pepsi",
+        answer3: "Sprite",
+        answer4: "Dr. Pepper",
+        correctAnswer: "Dr. Pepper",
+     }
 ]
 
  const start = true;
@@ -103,17 +103,12 @@ answer1.innerText = questions[0].answer1;//Injecting the answer1 onto the answer
 answer2.innerText = questions[0].answer2;
 answer3.innerText = questions[0].answer3;
 answer4.innerText = questions[0].answer4;
-//next.innerText = button.next;
 
-// answer1.value = questions[0].answer
-// answer2.value = questions[0].answer.
-// answer3.value = questions[0].answer.isCorrect;
-// answer4.value = questions[0].answer.isCorrect;
+
 function checkAnswer(event) {
    
 const choice = event.target.innerText
    console.log(choice)
-      //Replace 0 with currentIndex which will keep track of a question.📝
  if (choice === questions[0].correctAnswer) {
     console.log(choice)
 
@@ -128,26 +123,11 @@ let currentIndex = 0;
 
 
 
-// let currentQuestionindex = 0;
-// currentQuestionindex++;
-
-// console.log(currentQuestionindex)
-
  
 
-// }
+
 }
 }
-
-//next.addEventListener("click", next);
-//console.log({next})
-// next.addEventListener("click");
-
-
-
-   
-
-
 
       //Increase the currentIndex by 1📝
 
@@ -167,30 +147,33 @@ answer4.addEventListener("click", checkAnswer)
 
 
 
-const choice = document.querySelector("check");
 
- checkAnswer.addEventListener("click"); 
-   if(choice == "correct") {
-      answer.innerText = "True";
-      answer.style.color = "green"; 
-   } else {
-      //answer.innerText = "incorrect";
-      //answer.style.color = "red";
-      //console.log(incorrect)
-   }
-
-
-// if (start) {
-//    generate("0");
-// }
 
 
    
+const selected = "";
+
+answer2.addEventListener("click", () => {
+   answer1.style.backgroundColor = "red"
+   answer2.style.backgroundColor = "green"
+   answer3.style.backgroundColor = "red"
+   answer4.style.backgroundColor = "red"
+   selected = answer2.value;
+
+})
 
 
 
+// const choice = document.querySelector("check");
 
-
+//  checkAnswer[0].addEventListener("click"); 
+//    if(choice == "true") {
+//       answer[0].innerText = "True";
+//       answer.style.color = "green"; 
+//    } else {
+//        answer.innerText = "False";
+//       answer[0].style.color = "red";
+//    }
     
 
 
