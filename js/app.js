@@ -17,6 +17,7 @@ const button = document.createElement('button')
       button.removeEventListener('click', click)
     }
 
+    
 
 //Remove the button and display the questions and answers.
 // -How would I remove the button then activate the questions and answers.
@@ -26,54 +27,51 @@ const button = document.createElement('button')
 
 const questions =  [
     {
-        question1: "Which fast-food restaurant has the slogan, Eat fresh?",
-        answer1: "Taco Bell",
+        question: "Which fast-food restaurant has the slogan, Eat fresh?",
+        answer1: "Taco Bell", 
         answer2: "Subway",
         answer3: "Wendys",
         answer4: "Arbys",
         correctAnswer: "Subway",
      },
      {
-
-        question2: "What is the most common pizza topping?",
-        answer: "Pepperoni",
-        answer: "Ham",
-        answer: "Sausage",
-        answer: "Bacon",
+        question: "What is the most common pizza topping?",
+        answer1: "Pepperoni",
+        answer2: "Ham",
+        answer3: "Sausage",
+        answer4: "Bacon",
         correctAnswer: "Pepperoni",
      },
      {
-        question3: "How many flavors of ice cream does Baskin-Robbins have?",
+        question: "How many flavors of ice cream does Baskin-Robbins have?",
         answer1: "22",
         answer2: "60",
         answer3: "40",
         answer4: "31",
         correctAnswer: "31",
      },   
-     { 
-        question4: "Coca-Cola was first sold in which state?",
+     {  
+        question: "Coca-Cola was first sold in which state?",
         answer1: "New York",
         answer2: "Arizona",
         answer3: "Georgia",
         answer4: "Texas",
         correctAnswer: "Georgia",
      },
-     {
-        question5: "What is the oldest soft drink in America?",
-        answer1: "Coca Cola",
-        answer2: "Pepsi",
-        answer3: "Sprite",
-        answer4: "Dr. Pepper",
-        correctAnswer: "Dr. Pepper",
-     }
+   //   {
+   //      question: "What is the oldest soft drink in America?",
+   //      answer1: "Coca Cola",isCorrect: false,
+   //      answer2: "Pepsi",isCorrect: false,
+   //      answer3: "Sprite",isCorrect: false,
+   //      answer4: "Dr. Pepper",isCorrect: true,
+   //      correctAnswer: "Dr. Pepper",
+   //   }
 ]
 
-const start = true;
+ const start = true;
+ console.log({start})
 
-function generate(Class) {
-    
 
-}
 const answer = document.querySelectorAll(".answer")
 
 console.log({answer})
@@ -82,7 +80,13 @@ const question = document.querySelector(".question");
 
 console.log({question})
 
-question.innertext = 'question[Class]';
+const next = document.querySelector(".next");
+console.log({next})
+
+// const next = document.querySelector(".next")
+// console.log({next})
+
+
 
 const answer1 = document.querySelector('.answer1');
 console.log({answer1})
@@ -94,13 +98,94 @@ const answer4 = document.querySelector('.answer4');
 console.log({answer4})
 
 
-
-answer1.innerText = questions[0].answer1;
+question.innerText = questions[0].question;//Injecting the question onto the question div.
+answer1.innerText = questions[0].answer1;//Injecting the answer1 onto the answer1 div.
 answer2.innerText = questions[0].answer2;
 answer3.innerText = questions[0].answer3;
 answer4.innerText = questions[0].answer4;
+//next.innerText = button.next;
+
+// answer1.value = questions[0].answer
+// answer2.value = questions[0].answer.
+// answer3.value = questions[0].answer.isCorrect;
+// answer4.value = questions[0].answer.isCorrect;
+function checkAnswer(event) {
+   
+const choice = event.target.innerText
+   console.log(choice)
+      //Replace 0 with currentIndex which will keep track of a question.📝
+ if (choice === questions[0].correctAnswer) {
+    console.log(choice)
+
+let currentIndex = 0;
+
+ if (currentIndex >= questions.length)  
+ {
+   console.log('end of questions')
+ } else { 
+   console.log(questions[currentIndex]);
+ }
 
 
+
+// let currentQuestionindex = 0;
+// currentQuestionindex++;
+
+// console.log(currentQuestionindex)
+
+ 
+
+// }
+}
+}
+
+//next.addEventListener("click", next);
+//console.log({next})
+// next.addEventListener("click");
+
+
+
+   
+
+
+
+      //Increase the currentIndex by 1📝
+
+
+
+ 
+   
+
+
+answer1.addEventListener("click", checkAnswer)   
+
+answer2.addEventListener("click", checkAnswer)
+  
+answer3.addEventListener("click", checkAnswer)
+   
+answer4.addEventListener("click", checkAnswer)
+
+
+
+const choice = document.querySelector("check");
+
+ checkAnswer.addEventListener("click"); 
+   if(choice == "correct") {
+      answer.innerText = "True";
+      answer.style.color = "green"; 
+   } else {
+      //answer.innerText = "incorrect";
+      //answer.style.color = "red";
+      //console.log(incorrect)
+   }
+
+
+// if (start) {
+//    generate("0");
+// }
+
+
+   
 
 
 
