@@ -21,10 +21,10 @@ h1 {
   text-align: center;
 }
 
-.points-scored {
+/* .points-scored {
   text-align:right;
   margin-right: 30px;
-}
+} */
 
 
 .question-container {
@@ -35,6 +35,7 @@ h1 {
   margin: 30px; 
   background-color: aqua;
   text-align: center;
+  font-size: 30px;
 }
 
 .question {
@@ -62,22 +63,37 @@ h1 {
 
 
  .answer-container { 
-  /* display: grid;
-  grid-template-columns: repeat(2, auto); */
   flex-wrap: wrap; 
   border: 20px solid #d643a5;  
   background-color: aqua; 
   gap: 30px;
-  padding: 40px; 
+  padding: 30px; 
   align-items: center;
   text-align: center; 
  }  
 
+ .correct {
+  background-color: green;
+  color: white;
+}
+
+.incorrect {
+  background-color: red;
+  color: white;
+}
+
+.navigation {
+  border: 20px solid #d643a5;
+  background-color: aqua;
+  gap: 10px;
+  padding: 30px;
+  margin: 20px;
+}
 
 
-
-
-
+.button {
+  padding: 30px;
+}
 
 
 

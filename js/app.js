@@ -2,10 +2,6 @@ const startButton = document.getElementById('startButton')
 const nextButton = document.getElementById('nextButton')
 const questionContainer = document.querySelector('.question-container')
 const answerContainer = document.getElementById('answer-container')
-// const question = document.querySelector('.question')
-// const answers = document.getElementById("answer")
-
-// const questionElement = document.getElementById('question');
 
 
 
@@ -15,15 +11,15 @@ let shuffledQuestions, currentQuestionIndex
 startButton.addEventListener('click', startTrivia)
 nextButton.addEventListener('click', () => {
 currentQuestionIndex++
-setNextQuestion(nextButton)
+setNextQuestion()
 })
 
 function startTrivia() {
    console.log('Started')
    startButton.classList.add('hide')
-   shuffledQuestions = questions.sort(() => Math.random())
+   shuffledQuestions = questions.sort(() => Math.random() -10)
    currentQuestionIndex = 0
-   // question.classList.remove('hide')
+   
    setNextQuestion()
 }
 
@@ -33,7 +29,7 @@ function setNextQuestion() {
 }
 
 function showQuestion(question) {
-   showQuestion.innerText = question.question
+   questionContainer.innerText = question.question
    question.answer.forEach(answer => {
    const button = document.createElement('button')
    button.innerText = answer.text
@@ -47,27 +43,28 @@ function showQuestion(question) {
 }
 
 function reset() {
-while(answerContainer.firstChild) {
+while (answerContainer.firstChild) {
    answerContainer.removeChild(answerContainer.firstChild)
 }
 }
 
 
- function selectAnswer(event) {
-   const selectedButton = event.target
-   const correct = selectedButton.dataset.correct
-   // setStatusClass(document.body, correct)
-   // Array.from(answerContainer.child).forEach(button => {
-   // setStatusClass(button, button.dataset.correct)
-   // })
-   if (shuffledQuestions.length > currentQuestionIndex + 1) {
-   nextButton.classList.remove('hide')
-   } else {
-     startButton.innerText = 'Restart'
-     startButton.classList.remove('hide')
-   }
-}
 
+
+function selectAnswer() {
+   const selectedAnswer = this.getAttribute("data-correct");
+   if (selectedAnswer === "true") {
+     this.classList.add("correct");
+   } else {
+     this.classList.add("incorrect");
+   }
+ }
+ 
+ const answerButtons = document.querySelectorAll(".answer");
+ for (let i = 0; i < answerButtons.length; i++) {
+   answerButtons[i].addEventListener("click", selectAnswer);
+ }
+ 
 
 const questions =  [
     {
@@ -78,6 +75,7 @@ const questions =  [
         { id:3, text: "Wendys", correct: false },
         { id:4, text: "Arbys", correct: false },
         ],
+        correctAnswerIndex:1
      },
      {
         question: "What is the most common pizza topping?",
@@ -96,7 +94,7 @@ const questions =  [
         { id:3, text: "40", correct: false },
         { id:4, text: "31", correct: true },
         ],
-        
+        correctAnswerIndex:3
      },   
      {  
         question: "Coca-Cola was first sold in which state?",
@@ -106,6 +104,7 @@ const questions =  [
         { id:3, text: "Georgia", correct: true },
         { id:4, text: "Texas", correct: false },
         ], 
+        correctAnswerIndex:2
      },
      {
         question: "What is the oldest soft drink in America?",
@@ -115,24 +114,12 @@ const questions =  [
         { id:3, text: "Sprite", correct: false },
         { id:4, text: "Pepsi", correct: false },
         ],
+        correctAnswerIndex:1
      }
 ]
-// const currentQuestion = questions[currentQuestionIndex];
-// question.innerText = currentQuestion.question;
-
-questions.innerHTML = questions.question
-// questionContainer.innerHTML = question.question
-// questions.innerHTML = questions[1].question
-// questions.innerHTML = questions[2].question
-// questions.innerHTML = questions[3].question
-// questions.innerHTML = questions[4].question
-// questions.innerHTML = questions[5].question
 
 
-// answer1.innerHTML = answer1
-// answer2.innerHTML = answer2
-// answer3.innerHTML = answer3
-// answer4.innerHTML = answer4
+
 
 
    
